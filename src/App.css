@@ -1,7 +1,19 @@
+.App {
+    padding-bottom: 80px; 
+    margin: 0;
+    padding: 0 ;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 .pagination-container {
     display: flex;
     justify-content: space-between;
-    padding: 15px;
+    padding: 16px;
     background-color: #f0f0f3;
     position: fixed;
     bottom: 0;
@@ -10,6 +22,7 @@
     box-shadow: 0 -1px 10px rgba(0, 0, 0, 0.1);
     z-index: 10; 
   }
+
   .centered-message {
     display: flex;
     justify-content: center; 
@@ -35,29 +48,32 @@
     color: #5bc0de; 
     background-color: rgba(173, 216, 230, 0.5); 
   }
-  .App {
-    padding-bottom: 80px; 
-  }
+
   .sticky-container {
     position: sticky;
     top: 0px;
     z-index: 99;
     background-color: #f6f3f5;
-    padding-bottom: 20px;
-  }
-  
-  h2 {
+    padding: 20px;
+
+}
+.sticky-container__title{
     font-size: 2rem;
     color: #333;
     font-weight: bold;
-    margin-bottom: 30px;
+    margin: 0;
+    margin-bottom: 24px;
     text-transform: uppercase;
     letter-spacing: 2px;
     position: relative;
     display: inline-block;
+    @media (max-width: 768px){
+      font-size: 0.8rem;
+      letter-spacing: 0.24px;
+      margin-bottom: 16px;
+    }
   }
-  
-  h2::before {
+  .sticky-container__title::before{
     content: "";
     position: absolute;
     width: 100%;
@@ -69,10 +85,14 @@
   
   .button-container {
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 20px;
-    margin: 20px 0;
+    gap: 16px;
+    @media (max-width: 768px){
+        flex-direction: column;
+        align-items: flex-start;
+    }
   }
   
   button {
@@ -189,17 +209,16 @@
     flex-direction: column; 
     align-items: center; 
     justify-content: center; 
-    width: 100%;
     padding: 20px;
   }
   
   .single-column-card {
     border-radius: 20px;
-    padding: 20px;
     background-color: #f0f0f3;
     box-shadow: 7px 7px 15px #b8b9be, -7px -7px 15px #ffffff;
     transition: box-shadow 0.3s ease;
-    width: 280px;
+    width: 100%;
+    max-width: 280px;
     margin: 10px 0; 
     position: relative;
     overflow: hidden;

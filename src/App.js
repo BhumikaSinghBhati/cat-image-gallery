@@ -51,7 +51,7 @@ function App() {
   return (
     <div className="App">
       <div className="sticky-container">
-        <h2>Cat Image Gallery</h2>
+        <h3 className='sticky-container__title'>Cat Image Gallery</h3>
 
         <div className="button-container">
           <button onClick={() => navigate("/single-column")} disabled={loading}>

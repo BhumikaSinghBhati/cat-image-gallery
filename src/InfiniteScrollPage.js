@@ -57,19 +57,20 @@ function InfiniteScroll() {
   return (
     <div className="App">
       <div className="sticky-container">
-      <h3>Single Column Cat Image Gallery</h3>
+      <h3 className="sticky-container__title">Single Column Cat Image Gallery</h3>
 
-      <button onClick={() => navigate("/")} style={{ marginBottom: '20px' }}>
-        Go to Pagination Page
-      </button>
+      <div className="button-container">
+        <button onClick={() => navigate("/")} >
+            Go to Pagination Page
+        </button>
 
-      <button
-        onClick={handleFetchImages}
-        style={{ marginBottom: "20px", display: "block" }}
-        disabled={loading} 
-      >
-        Fetch Cat Images
-      </button>
+        <button
+            onClick={handleFetchImages}
+            disabled={loading} 
+        >
+            Fetch Cat Images
+        </button>
+      </div>
       </div>
 
       {error && (
